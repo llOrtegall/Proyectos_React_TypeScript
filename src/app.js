@@ -12,6 +12,6 @@ app.set('port', 4040)
 app.use(morgan('dev'))
 
 // TODO: Routes <---------------
-app.use(languaguesRoutes)
+app.use('/api/languages', languaguesRoutes)
 
 export default app
