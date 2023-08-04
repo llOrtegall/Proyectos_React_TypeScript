@@ -1,0 +1,25 @@
+GET http://localhost:3000/api/languages
+
+###
+POST http://localhost:3000/api/languages
+Content-Type: application/json
+
+{
+  "name": "Visual Basic",
+  "programmers": 6
+}
+
+###
+GET http://localhost:3000/api/languages/4
+
+###
+DELETE  http://localhost:3000/api/languages/5
+
+###
+PUT http://localhost:3000/api/languages/4
+Content-Type: application/json
+
+{
+  "name": "C#",
+  "programmers": 16
+}

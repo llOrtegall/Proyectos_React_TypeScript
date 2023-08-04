@@ -6,10 +6,11 @@ import languaguesRoutes from './routes/language.routes'
 const app = express()
 
 // TODO: Settings <---------------
-app.set('port', 4040)
+app.set('port', 3000)
 
 // TODO: Middlewares <---------------
 app.use(morgan('dev'))
+app.use(express.json())
 
 // TODO: Routes <---------------
 app.use('/api/languages', languaguesRoutes)
