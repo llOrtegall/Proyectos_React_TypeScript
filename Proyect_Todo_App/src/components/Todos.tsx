@@ -3,11 +3,12 @@ import { Todo } from './Todo'
 
 interface Prosp {
   todos: ListOfTodos
+  onRemove: (id: number) => void
 }
 
-export const Todos: React.FC<Prosp> = ({ todos }) => {
+export const Todos: React.FC<Prosp> = ({ todos, onRemove }) => {
   return (
-    <ul>
+    <ul className='todo-list'>
       {todos.map(todo => (
         <li key={todo.id} className={`${todo.completed ? 'completed' : ''}`}>
           <Todo
@@ -15,6 +16,7 @@ export const Todos: React.FC<Prosp> = ({ todos }) => {
             id={todo.id}
             title={todo.title}
             completed={todo.completed}
+            onRemoveTodo={onRemove}
           />
         </li>
       ))}
